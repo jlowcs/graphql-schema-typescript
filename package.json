@@ -1,6 +1,6 @@
 {
   "name": "@jlowcs/graphql-schema-typescript",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "description": "Generate TypeScript from GraphQL's schema type definitions",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -43,6 +43,10 @@
     "graphql": "^14.0.0 || ^15.0.0",
     "typescript": "*"
   },
+  "files":[
+    "lib",
+    "index.js"
+  ],
   "jest": {
     "testEnvironment": "node",
     "setupFilesAfterEnv": [
