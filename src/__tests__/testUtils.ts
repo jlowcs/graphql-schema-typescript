@@ -10,14 +10,14 @@ export const executeCommand = (command: string, options?: childProcess.ExecOptio
     return new Promise((resolve, reject) => {
         const process = childProcess.exec(command, options);
 
-        process.stdout.on('data', console.log);
-        process.stderr.on('data', console.error);
+        process.stdout!.on('data', console.log);
+        process.stderr!.on('data', console.error);
 
         process.on('close', (exitCode: number) => {
             if (exitCode !== 0) {
                 reject(`Command: ${command} return non-0 exit code: ${exitCode}`);
             } else {
-                resolve();
+                resolve(undefined);
             }
         });
         process.on('error', err => {
