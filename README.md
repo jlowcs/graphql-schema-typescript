@@ -1,10 +1,12 @@
+Forked from https://github.com/dangcuuson/graphql-schema-typescript
+
 # A GraphQL utility to generate Typescript from Schema Definition
 
-This project is inspired by Apollo-codegen. Currently apollo-codegen 
-only generate TypeScripts for GraphQL Client. 
+This project is inspired by Apollo-codegen. Currently apollo-codegen
+only generate TypeScripts for GraphQL Client.
 The shape of the generated type is based on the client's query strings.
 
-This module aim to do the Server counterpart: from a Schema Definition, generate the 
+This module aim to do the Server counterpart: from a Schema Definition, generate the
 types to make it type-safed when developing GraphQL server (mainly resolvers)
 
 ## Compatibility
@@ -37,7 +39,7 @@ generateTypeScriptTypes(schema, outputPath, options)
 
 ```
 
-You can then bootstrap this script on your dev server, 
+You can then bootstrap this script on your dev server,
 or use something like [ts-node](#https://github.com/TypeStrong/ts-node) to execute it directly
 
 * `schema`: your graphql schema
@@ -102,7 +104,7 @@ export interface RootQueryToUsersResolver<TParent = any, TResult = any> {
 }
 ```
 
-In this example, if you are not using [graphql-tools](https://www.npmjs.com/package/graphql-tools), 
+In this example, if you are not using [graphql-tools](https://www.npmjs.com/package/graphql-tools),
 you can still use `RootQueryToUsersResolver` type to make your args type safed.
 
 ## Default TParent & TResult
@@ -135,7 +137,7 @@ export interface RootQueryToUsersResolver<TParent = undefined, TResult = Array<G
 ```
 
 ```javascript
-// in v1.12.11, asyncResult also accept string value 'always', 
+// in v1.12.11, asyncResult also accept string value 'always',
 // which will make returns value of resolve functions to be `Promise<TResult>`,
 // due to an issue with VSCode that not showing auto completion when returns is a mix of `T | Promise<T>` (see [#17](https://github.com/dangcuuson/graphql-schema-typescript/issues/17))
 
