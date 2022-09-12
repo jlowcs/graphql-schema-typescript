@@ -12,8 +12,8 @@ types to make it type-safed when developing GraphQL server (mainly resolvers)
 ## Compatibility
 | graphql-schema-typescript |  graphql         |
 |---------------------------|------------------|
-|1.6                        | ^16.0.0          |
-|1.5                        | ^14.0.0, ^15.0.0 |
+|2.0                        | ^16.0.0          |
+|1.5, 1.6                   | ^14.0.0, ^15.0.0 |
 |1.4                        | 0.11~0.13        |
 
 ## Features
